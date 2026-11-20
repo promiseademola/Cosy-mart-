@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech&display=swap" rel="stylesheet">	
+<link rel="stylesheet" type="text/css" href="index.css">
+<title>CosyMart</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<style type="text/css">
+			*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	}
+
+	@media (max-width:765px){
+		body{
+			overflow-x: hidden;
+		}
+	}
+
+
+	.header{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	top:0;
+	left:0;
+	z-index:999;
+}
+
+	.logo h1{
+	margin-top:-20px;
+	margin-left: 15%;
+	background-color: #fff;
+	position: absolute;
+	color: #010007;
+	font-size: 24px;
+	font-weight: 600;
+	}
+
+	.logo span{
+		color:#E83438;
+	}
+
+.logo-bar{
+position: relative;
+height: 100%;
+max-width: 1000px;
+width: 100%;
+margin: 0 auto;
+padding: 0 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+
+.logo-bar .siderbaropen{
+color:#fff;
+font-size:25px;
+padding:5px;
+cursor:pointer;
+display:none;
+}
+
+@media (max-width:765px){
+	.header{
+	position:sticky;
+	width:110%;
+	padding:20px 0;	
+	}
+	.logo h1{
+	display:none;
+	}
+
+}
+
+.nav-links{
+background-color: #E83438;
+width: 821px;
+height: 100%;
+padding: 20px 0;
+margin-left:500px;
+display: flex;
+align-items: center;
+}
+
+	.nav-links li{
+	list-style-type: none;
+	margin: 0 20px;
+}
+
+
+	.nav-links li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+	.nav-links li a#active{
+		cursor: pointer;
+		color: #fff;
+		border-bottom: 1px solid #fff;
+	}
+
+	.nav-links li a:hover{
+		cursor: pointer;
+		transition: all 0.5s ease;
+		color: #fff;
+		border-bottom: 1px solid #fff;
+	}
+
+	.nav-links li a i{
+		font-size: 8px;
+		margin-left: 2px;
+	}
+
+nav .logo-bar .logo a{
+font-size: 25px;
+text-decoration: none;
+font-weight: 600;
+}
+
+.order .logo-toggle{
+	display:none;
+}
+
+	.nav-links ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left:30px;
+	}
+
+	.nav-links li{
+	list-style-type: none;
+	margin: 0 20px;
+	}
+
+	.nav-links li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 400;
+	}
+
+
+	@media (max-width:765px){
+	.nav-links ul{
+		flex-direction:column;
+		margin-left:-40px;
+	}
+	.nav-links li{
+		margin:10px;
+	}
+		
+	.nav-links li a{
+	text-align:center;
+}
+	.nav-links li a:hover{
+		background-color:#fff;
+		padding:0;
+	}
+}
+
+@media (max-width:765px){
+ .order{
+	position:fixed;
+	height:100%;
+	width:350px;
+	top:0;
+	left:100%;
+	background-color:#FAFAFA;
+	z-index:100;
+	transition:all 0.4s ease;
+ }
+.order .logo{
+	margin-left:40px;
+	margin-top:30px;
+}
+	
+nav.active .order{
+	left:-0%;
+
+}
+
+.logo-bar .nav-links{
+	flex-direction:column;
+	padding-top:30px;
+}
+
+.nav-links li a{
+display:block;
+margin-top:20px;
+}
+
+.order .logo-toggle{
+display:block;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.order  .logo-toggle .siderbarclose{
+color:#451D51;
+margin-top:30px;
+margin-right:40px;
+font-size:30px;
+cursor:pointer;
+display:block;
+}
+
+.logo-bar .siderbaropen{
+color:#451D51;
+font-size:30px;
+margin-top:5px;
+margin-left:90px;
+padding:5px;
+cursor:pointer;
+display:block;
+}
+
+}
+
+
+	.icon i{
+		margin-left: 17px;
+		font-size: 18px;
+		color: #fff;
+	}
+
+
+	.banner-container{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+	margin:auto;
+	background-color:#ddd;
+	}
+
+	.banner{
+	position:relative;
+	width:100%;
+	height:575px;
+	display:none;  
+	}
+
+	.banner img{
+	position:absolute;
+	height:100%;
+	width:100%;
+	z-index:1;
+	left:0;
+/* animation:; */ 
+	}
+
+	.banner h1{
+	position:absolute;
+	left:34.5%;
+	top:3%;
+	transform:translate(-50%,50%);
+	z-index:3;
+	color:#fff;
+	font-family:"Quattrocento", sans-serif;
+	font-weight:800;
+	font-size:70px;
+	}
+	
+	.banner button{
+	position:absolute;
+	transform:translate(-50%,-50%);
+	left:20%;
+	top:74%;
+	z-index:3;
+	font-size:14px;
+	font-weight:400;
+	color:#fff;
+	background-color:#E83438;
+	border-radius:5px;
+	border:none;
+	padding: 14px 18px;
+	}
+
+	.banner button i{
+		font-size: 16px;
+		margin-left: 7px;
+	}
+
+	.banner button a{
+		text-decoration: none;
+		color: #fff;
+	}
+
+	.overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+	z-index:2;
+	}
+
+
+		@media (max-width:765px){
+		.banner-container{
+		width:100%;
+		}		
+
+	.banner h2{
+		top:10%;
+		left:20%;
+	}
+	
+	.banner h1{
+		top:15%;
+		left:20%;
+		font-size:23px;
+		font-weight:500;
+	}
+	
+		.banner p{
+		text-align:left;
+		font-size:14px;
+		font-weight:400;
+		top:20%;
+		left:20%;
+	}
+	
+	}
+
+	.about{
+		margin-left: 200px;
+		margin-top: 75px;
+		display: flex;
+	}
+
+	.aboutimg img{
+		width:370px;
+		height: 500px;
+	}
+
+	.aboutimg p{
+		font-family: "Quattrocento", sans-serif;
+		font-size:23px;
+		font-weight: 800;
+	}
+
+	.aboutimg span{
+		font-family: "Quattrocento", sans-serif;
+		color: #E83438;
+	}
+
+	.aboutimg h2{
+		font-family: "Quattrocento", sans-serif;
+		font-size: 18px;
+		font-weight: 800;
+		margin-top: 20px;
+		margin-left: 120px;
+	}
+
+	.aboutimg h3{
+		font-size: 11px;
+		font-weight: 400;
+		margin-left: 120px;
+	}
+
+
+	.abouttext{
+		margin-left: 30px;
+	}
+
+	.abouttext img{
+		width: 250px;
+		height: 200px;
+		border-radius: 10px;
+	}
+
+	.abouttext p{
+		font-family: "Quattrocento", sans-serif;
+		font-size: 16px;
+		font-weight: 800;
+		color: #E83438;
+		margin-top:20px;
+		margin-bottom: 20px;
+		margin-left: 130px;
+	}
+
+	.abouttext h1{
+		font-family: "Quattrocento", sans-serif;
+		font-size: 40px;
+		font-weight: 800;
+	}
+
+	.abouttext h2{
+		margin-top: 20px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.abouttext span{
+		font-family: "Quattrocento", sans-serif;
+		color: #E83438;	
+	}
+
+	.abouttext button{
+	margin-top:10px;
+	font-family: "Quattrocento", sans-serif;
+	font-size:14px;
+	font-weight:800;
+	color:#000;
+	background-color:#fff;
+	border-radius:5px;
+	border:none;
+	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+	padding: 14px 23px;
+	}
+
+	.abouttext button i{
+		margin-left: -20px;
+		font-size: 8px;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		border-radius:50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: #fff;
+		background-color: #E83438;
+	}
+
+	.abouttext button#button{
+		font-family:"Poppins", sans-serif;
+		font-size: 13px;
+		font-weight: 600;
+		background-color: #E83438;
+		text-align: center;
+		margin-top: 30px;
+		border-radius: 3px;
+	}
+
+	.abouttext button#button a{
+		text-decoration: none;
+		color: #fff;
+	}
+
+	.abouttext img#image{
+		width: 350px;
+		height: 350px;
+		margin-top: -400px;
+		margin-left: 350px;
+		border-radius: 50%;
+	}
+
+
+		@media (max-width:765px){
+		.about{
+		margin-left: 0px;
+		flex-direction: column;
+		}	
+
+		.aboutimg img{
+			width: 100%;
+			max-width: 1000px;
+		}
+
+		.aboutimg p{
+			font-size: 20px;
+		}
+
+		.abouttext{
+			margin-left: 10px;
+		}
+
+		.abouttext h1{
+			font-size: 30px;
+		}
+
+		.abouttext img{
+		display: block;
+		margin: 0 auto;
+		margin-left: 5px;
+		width: 95%;
+		max-width: 1000px;	
+		}
+
+			.abouttext img#image{
+			display: block;
+			margin:0 auto;
+			margin-top: 20px;
+			margin-left: 5px;
+			width: 95%;
+			max-width: 1000px;
+			}
+	}
+
+
+
+	.delivery{
+		margin-top: 100px;
+		margin-left: 170px;
+		display: flex;
+	}
+
+	.delivery-head h2{
+		font-family:"Quattrocento", sans-serif;
+		margin-left: 130px;
+		font-size: 18px;
+		font-weight: 600;
+		color:#E83438;
+	}
+
+	.delivery-head img{
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		margin-top: 30px;
+		width: 400px;
+		height: 550px;
+	}
+
+
+	.delivery-content{
+		margin-left: 40px;
+	}
+
+	.delivery-content h1{
+	font-family:"Quattrocento", sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	}
+
+	.delivery-content p{
+		font-size: 12px;
+		font-weight: 400;
+		margin-top: 15px;
+	}
+
+	.delivery-content span{
+	font-family:"Quattrocento", sans-serif;
+	color:#E83438;
+	}
+
+
+
+	.delivery-content i{
+		margin-top: 40px;
+		font-size: 20px;
+		font-weight: 600;
+		background-color:#E83438;
+		color: #fff;
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.delivery-content h2{
+	margin-top: 15px;
+	font-family:"Quattrocento", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	}
+
+	.delivery-content h3{
+		margin-top: 10px;
+		font-size: 12px;
+		font-weight: 400;
+		font-family:"Poppins", sans-serif;
+	}
+
+
+	.delivery-content i#second{
+		margin-left: 350px;
+		margin-top:-150px ;
+	}
+
+	.delivery-content h2#second{
+		margin-left: 350px;
+	}
+
+	.delivery-content h3#second{
+		margin-left: 350px;
+	}
+
+
+	@media (max-width:765px){
+		.delivery{
+			flex-direction: column;
+			margin-top:100px ;
+			margin-left: 10px;
+		}
+
+		.delivery-head img{
+			margin-left: 0px;
+			width: 100%;
+			max-width: 1000px;
+		}
+
+		.delivery-content{
+			margin-left: 10px;
+		}
+
+		.delivery-content h1{
+			font-size: 25px;
+		}
+
+		.delivery-content i#second{
+			margin-top: 40px;
+			margin-left: 0px;
+		}
+
+		.delivery-content h2#second{
+			margin-top: 15px;
+			margin-left: 0px;
+		}
+
+		.delivery-content h3#second{
+			margin-top: 10px;
+			margin-left: 0px;
+		}
+
+
+	}
+
+
+	.footer{
+		color: #fff;
+		background-color:#000;
+		width: 100%;
+		height:400px;
+		padding-top: 90px;
+		margin-top: 75px;
+		display: flex;
+	}
+
+
+	.footer-contact{
+	margin-left: 170px;
+	}
+
+
+	.footer-contact h1{
+		font-size: 28px;
+		font-weight: 600;
+	}
+
+	.footer-contact span{
+		color:#E83438;
+	}
+
+	.footer-contact p{
+		margin-top: 10px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.footer-contact h3{
+		display: flex;
+		margin-top: 25px;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.footer-contact h3 i{
+		margin-top: -5px;
+		margin-right: 10px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color:#E83438;
+		background-color:rgba(232, 52, 56, 0.2);
+		font-size: 10px;
+	}
+
+	.footer-contact h4{
+		display: flex;
+		margin-top: 15px;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.footer-contact h4 i{
+		margin-top: -5px;
+		margin-right: 10px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color:#E83438;
+		background-color:rgba(232, 52, 56, 0.2);
+		font-size: 10px;
+	}
+
+
+	.footer-contact h2{
+		margin-top: 20px;
+		margin-left: 40px;
+		font-family:"Quattrocento", sans-serif;
+		font-size: 17px;
+		font-weight: 600;
+	}
+
+
+	.footer-contact i{
+		margin-top: 20px;
+		font-size: 15px;
+		width: 40px;
+		height: 40px;
+		padding: 10px;
+		text-align: center;
+		padding-top: 12px;
+		border-radius: 50px;
+		color: #000;
+		background-color:#fff;
+	}
+
+	.footer-contact i:hover{
+			color: #fff;
+		background-color:#E83438;
+	transition: all 0.3s ease;	
+	}
+
+	.footer-contact i#active{
+		color: #fff;
+		background-color:#E83438;
+	}
+
+
+	.footer-links{
+		margin-left: 70px;
+	}
+
+	.footer-links h2{
+		margin-top: 10px;
+		font-family:"Quattrocento", sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+	.footer-links h2 hr{
+		margin-top: 3px;
+		color:#E83438;
+		width: 50px;
+	}
+
+	.footer-links ul{
+		margin-top: 30px;
+		font-size: 12px;
+		font-weight: 400;
+		color: #fff;
+	}
+
+	.footer-links li:hover{
+	color: #E83438;
+	transition: all 0.3s ease;
+	}
+
+
+	.footer-links li{
+		margin: 15px 0;
+		list-style-type: none;
+	}
+
+
+
+
+		.footer-categories{
+		margin-left: 70px;
+	}
+
+	.footer-categories h2{
+		margin-top: 10px;
+		font-family:"Quattrocento", sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+	.footer-categories h2 hr{
+		margin-top: 3px;
+		color:#E83438;
+		width: 50px;
+	}
+
+	.footer-categories ul{
+		margin-top: 30px;
+		font-size: 12px;
+		font-weight: 400;
+		color: #fff;
+	}
+
+	.footer-categories li:hover{
+		color: #E83438;
+		transition: all 0.3s ease;
+	}
+
+	.footer-categories li{
+		margin: 15px 0;
+		list-style-type: none;
+	}
+
+
+
+	.footer-offers{
+		margin-left: 70px;
+	}
+
+	.footer-offers h2{
+		margin-top: 10px;
+		font-family:"Quattrocento", sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+	.footer-offers h2 hr{
+		margin-top: 3px;
+		color:#E83438;
+		width: 50px;
+	}
+
+
+	.footer-offers input{
+		margin-top: 30px;
+		width:280px;
+		height: 45px;
+		padding-left: 15px;
+		font-size: 12px;
+		font-weight: 400;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+	}
+
+		.footer-offers button{
+		margin-top: 30px;
+		margin-left: 5px;
+		width:100px;
+		height: 45px;
+		font-size: 13px;
+		font-weight: 600;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		color: #fff;
+		background-color:#E83438;
+	}
+
+
+	.footer-offers h3{
+		margin-top: 15px;
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	.footer-bottom{
+		color: #fff;
+		background-color: #000;
+	}
+
+	.footer-bottom hr{
+		width: 75%;
+		margin-left: 170px;
+	}
+
+
+	.footer-bottom p{
+		font-size: 14px;
+		font-weight: 400;
+		margin-top: 30px;
+		padding-bottom: 10px;
+		margin-left: 170px;
+	}
+
+	.footer-bottom p#left{
+		margin-left: 70%;
+		margin-top: -30px;
+	}
+
+	.footer-bottom span{
+		color:#E83438;
+	}
+
+
+		@media (max-width:765px){
+			.footer{
+				flex-direction: column;
+				height: 1200px;
+				margin-top: 100px;
+			}
+
+			.footer-contact{
+				margin-left: 10px;
+			}
+
+			.footer-links{
+				margin-top: 30px;
+				margin-left: 10px;
+			}
+
+			.footer-categories{
+				margin-top: 30px;
+				margin-left: 10px;				
+			}
+
+			.footer-offers{
+				margin-top: 30px;
+				margin-left: 10px;
+			}
+
+			.footer-bottom hr{
+				margin-left: 0px;
+				width: 100%;
+			}
+
+			.footer-bottom p{
+				margin-left: 10px;
+			}
+
+			.footer-bottom p#left{
+				margin-top: 0px;
+				margin-left: 10px;
+				display: none;
+			}
+
+		}
+
+
+
+		.top{
+		width: 50px;
+		height: 50px;
+		background-color:#E83438;
+		position: fixed;
+		bottom: 50px;
+		right: 50px;
+		padding: 10px;
+		border-radius: 50%;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor:pointer;
+	}
+
+	.top a{
+		text-decoration: none;
+		color: #FAFAFA;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	</style>
+
+	</head>
+<body>
+
+<!--Header-->
+	<div class="header" id="top">
+	<nav>
+<div class="logo-bar">
+
+<div class="logo"><!--<img src="image/logo.png" alt="logo">--><h1>Cosy<span>Mart</span></h1></div>
+<i class="fa-solid fa-bars siderbaropen"></i>
+
+
+<div class="order">
+<div class="logo-toggle">
+<div class="logo"><img src="image/logo.png"></div>
+<i class="fa-solid fa-xmark siderbarclose"></i>
+</div>
+
+<div class="nav-links">
+<ul>
+<li><a href="index.php" id="active">Home<i class="fa-solid fa-plus"></i></a></li>
+<li><a href="">About Us</a></li>
+<li><a href="">Page</a></li>
+<li><a href="">Shop<i class="fa-solid fa-plus"></i></a></li>
+<li><a href="">Blog<i class="fa-solid fa-plus"></i></a></li>
+<li><a href="">Contact</a></li>
+
+</ul>
+
+<div class="icon">
+	<i class="fa-solid fa-bag-shopping"></i>
+</div>
+
+	<div class="icon">
+	<i class="fa-solid fa-magnifying-glass"></i>
+	</div>
+
+	<div class="icon">
+	<i class="fa-solid fa-square-poll-horizontal"></i>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+	
+</div>	
+
+<!--Banner-->
+	<div class="banner-container" id="banner">
+
+	<div class="banner">
+	<div class="overlay"></div>
+	<h1>Enjoy Great <br> Food With Meat, <br> Made Just For You</h1>
+	<button><a href="">Shop Now<i class="fa-solid fa-arrow-right-long"></i></a></button>
+	<img src="image/meat2.jpg" alt="banner img">
+	</div>
+
+	</div>
+
+
+<!--About-->
+	<div class="about">
+
+		<div class="aboutimg">
+			<img src="image/meat1.jpg">
+			<p>"Welcome in! Get Some Drinks, <br> Order Grub - &  Let Our Post Family </br>
+				Take <span>Great Care Of You &</span> Yours"</p>
+				<h2>Ademola Promise</h2>
+				<h3>Managing Director</h3>
+		</div>
+
+		<div class="abouttext">
+			<img src="image/meat1.jpg">
+			<p>About The CosyMart Service</p>
+			<h1>Where Quality Food <br> Meet <span>Excellent</span> <br> Service.</h1>
+			<h2>The master builder of <span>human happiness not only</span> <br> 
+			pleasure, but because those who do not know <br> pleasure rationally encounters consequences <br>
+			pursues or desires to obtain.</h2>
+			<button><i class="fa-solid fa-check"></i>Quiet Environment</button><br>
+			<button><i class="fa-solid fa-check"></i>Hygenic Food</button><br>
+			<button id="button"><a href="">Check Our Menu</a></button><br>
+			<img src="image/meat2.jpg" id="image">
+		</div>
+
+
+	</div>
+
+
+<!--Delivery-->
+<div class="delivery">
+	
+	<div class="delivery-head">
+	<h2>Why Choose Us</h2>
+	<img src="image/meat1.jpg">
+	</div>
+
+	<div class="delivery-content">
+	<h1>Meat Express <span>Delivery to</span> <br> Your Doorstep</h1>
+		<p>The master builder of human happiness not only <br>
+	pleasure, but because those who do not know <br>
+	pleasure rationally encounters consequences, <br>
+	pursues or desires to obtain.</p>
+
+
+	<i class="fa-solid fa-bacon"></i>
+	<h2>High Quality Meat</h2>
+	<h3>The master builder of human happiness not only <br>
+	pleasure rationally encounters consequences, <br>
+	pursues or desires to obtain.</h3>
+
+	<i class="fa-solid fa-truck" id="second"></i>
+	<h2 id="second">Unbeatable Value</h2>
+	<h3 id="second">The master builder of human happiness not only <br>
+	pleasure rationally encounter consequences, <br>
+	pursues or desires to obtain.</h3>
+
+	<i class="fa-solid fa-cloud-meatball"></i>
+	<h2>Complete Flexibility</h2>
+	<h3>The master builder of human happiness not only <br>
+	pleasure rationally encounter consequences, <br>
+	pursues or desires to obtain.</h3>
+
+	<i class="fa-solid fa-person" id="second"></i>
+	<h2 id="second">Quality Butcher</h2>
+	<h3 id="second">The master builder of human happiness not only <br>
+	pleasure rationally encounter consequences, <br>
+	pursues or desires to obtain.</h3>
+
+	</div>
+
+	</div>
+
+
+
+<!--Footer-->
+<div class="footer">
+
+	<div class="footer-contact">
+		<h1>Cosy<span>Mart</span></h1>
+		<p>if you are in e-commerce, you already know the <br>
+		 updates you are sending to them.</p>
+		<h3><i class="fa-solid fa-phone-volume"></i>+234 901 7647 227</h3>
+		<h4><i class="fa-solid fa-envelope"></i>cosymart@gmail.com</h4>
+		<h2>Follow us on</h2>
+		<i class="fa-brands fa-twitter" id="active"></i>
+		<i class="fa-brands fa-facebook-f"></i>
+		<i class="fa-brands fa-instagram"></i>
+		<i class="fa-brands fa-linkedin-in"></i>
+	</div>
+
+	<div class="footer-links">
+		<h2>Quick Links <hr></h2>
+		<ul>
+			<li>About Us</li>
+			<li>Order Tracking</li>
+			<li>Contact Us</li>
+			<li>Blog & News</li>
+			<li>Our Products</li>
+			<li>Shipping & Return</li>
+		</ul>
+	</div>
+
+
+	<div class="footer-categories">
+			<h2>Categories <hr></h2>
+				<ul>
+			<li>Beef </li>
+			<li>Mutton</li>
+			<li>Poultry</li>
+			<li>Sausage</li>
+			<li>Fish</li>
+			<li>BBQ Pack</li>
+		</ul>
+	</div>
+
+
+	<div class="footer-offers">
+		<h2>Suscribe to Updates & Offers <hr></h2>
+		<input type="text" name="text" placeholder="Enter your email"><button>Subscribe</button>
+		<h3>I agree to the terms & conditions</h3>
+
+	</div>
+
+</div>
+
+<div class="footer-bottom">
+	<hr>
+	<p>&copy; All rights reserved. Made by <span>Ademola Promise</span></p>
+	<p id="left">&copy; All rights reserved. Made by <span>Ademola Promise</span></p>
+</div>
+
+
+	<div class="top">
+	<a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+	</div>	
+
+
+
+
+<script type="text/javascript">
+			const body = document.querySelector("body");
+const nav = document.querySelector("nav");
+const siderbarclose = document.querySelector(".siderbarclose");
+const siderbaropen = document.querySelector(".siderbaropen");
+
+// for navigation
+siderbaropen.addEventListener("click", () =>{
+	nav.classList.add("active");
+})
+
+body.addEventListener("click", e =>{
+	let clicked = e.target;
+	
+	if(!clicked.classList.contains("siderbaropen") && !clicked.classList.contains("order")){
+	nav.classList.remove("active");
+	}
+})
+
+
+	const banners = document.querySelectorAll(".banner");
+	let currentSlide = 0;
+	
+	
+	function showSlide(index){
+	//hide all banners
+	for(let i=0; i<banners.length; i++){
+	banners[i].style.display = "none";
+	}	
+	
+	//show current banners
+	banners[index].style.display = "block";
+	}
+	
+	function nextSlide(){
+	currentSlide++
+	
+	if(currentSlide >= banners.length){
+	currentSlide = 0;
+	}
+	
+	showSlide(currentSlide);
+	
+	}
+
+
+	
+	function prevSlide(){
+	currentSlide--;
+	if(currentSlide < 0){
+	currentSlide0 = banners.length - 1;
+	}
+	
+	showSlide(currentSlide);
+	
+	}
+	
+	document.addEventListener("DOMContentLoaded", function(){
+	showSlide(currentSlide);
+	
+	setInterval(nextSlide, 10000);
+	
+	})
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>
